@@ -12,7 +12,14 @@ namespace OrdersStore
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(NewOrderPage), typeof(NewOrderPage));
+        }
+
+        protected override void OnNavigated(ShellNavigatedEventArgs args)
+        {
+            var state = args.Current.Location.AbsoluteUri;
+
+            Console.WriteLine(state);
         }
 
     }

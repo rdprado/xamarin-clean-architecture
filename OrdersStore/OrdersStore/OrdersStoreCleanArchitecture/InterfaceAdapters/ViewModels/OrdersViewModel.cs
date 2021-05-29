@@ -76,7 +76,7 @@ namespace OrdersStore.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+            await Shell.Current.GoToAsync(nameof(NewOrderPage));
         }
 
         async void OnItemSelected(OrderViewModel orderId)
